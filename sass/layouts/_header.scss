@@ -1,0 +1,17 @@
+.header {
+	padding: 1.2rem 0 .9rem;
+	box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .2);
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	&__logo {
+		height: map-get($font-size, header__logo);
+	}
+	&__back {
+		width: map-get($font-size, header__back);
+		position: absolute;
+		left: 1.5rem;
+		top: 1.4rem;
+		color: map-get($color-text, location);
+	}
+}

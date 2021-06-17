@@ -1,0 +1,7 @@
+@mixin shadow($opacity: $shadow-opacity) {
+	box-shadow: 0 0.3rem 0.8rem 0 rgba(0, 0, 0, $opacity);
+}
+
+@mixin btn-background($lighten: 0) {
+	background: linear-gradient(175deg, lighten($color-secondary, $lighten) 0%, lighten($color-primary, $lighten) 90%);
+}

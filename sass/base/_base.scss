@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li{
+	list-style: none;
+}
+
+body {
+	margin: auto;
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+.location {
+	background: map-get($color-background, location);
+	text-align: center;
+	padding: 1rem;
+	position: relative;
+	&__icon {
+		height: map-get($font-size, location);
+		vertical-align: bottom;
+		position: absolute;
+		margin-left: -2rem;
+		color: map-get($color-text, location);
+	}
+	&__text {
+		font-size: map-get($font-size, location);
+		font-weight: 500;
+		color: map-get($color-text, location);
+	}
+}
+.xplor-rest {
+	padding: 2.2rem;
+	text-align: center;
+	&__text {
+		font-size: map-get($font-size, text);
+		font-weight: 400;
+		color: map-get($color-text, explore-restaurants);
+		margin: 1rem 0 2rem;
+		display: block;
+	}
+}
+.process {
+	padding: 1.5rem;
+	&__card {
+		@include shadow;
+		background: map-get($color-background, process__card);
+		height: 4.5rem;
+		line-height: 4.5rem;
+		border-radius: 1.4rem;
+		font-weight: 900;
+		margin: 1rem 0;
+	}
+	&__badge {
+		display: inline-block;
+		margin: 0 0 0 -0.75rem;
+		vertical-align: middle;
+		background: $color-primary;
+		border-radius: 1.2rem;
+		line-height: 1.6rem;
+		height: 1.5rem;
+		width: 1.5rem;
+		text-align: center;
+		color: map-get($color-text, badge);
+		font-size: map-get($font-size, badge);
+		font-weight: initial;
+	}
+	&__icon {
+		margin: 0 1.8rem 0 1.4rem;
+		vertical-align: text-bottom;
+		height: map-get($font-size, process__icon);
+		color: map-get($color-text, process__icon);
+	}
+}
+.rest {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	padding: 3rem 1.5rem;
+	background: map-get($color-text, rest);
+	&__card {
+		@include shadow(.1);
+		border-radius: 1rem;
+		background: map-get($color-background, rest__card);
+		position: relative;
+		overflow: hidden;
+		text-decoration: none;
+		color: map-get($color-text, rest__card);
+		&:visited {
+			text-decoration: none;
+			color: map-get($color-text, rest__card);
+		}
+	}
+	&__new {
+		background: map-get($color-background, rest__new);
+		position: absolute;
+		border-radius: 0.15rem;
+		top: .7rem;
+		right: .7rem;
+		padding: .3rem .6rem;
+		font-size: map-get($font-size, rest__new);
+		font-weight: 500;
+		color: map-get($color-text, rest__new);
+		&--hidden {
+			display: none;		
+		}
+	}
+	&__icon {
+		position: absolute;
+		right: 1.5rem;
+		bottom:1.5rem;
+		height: map-get($font-size, rest__icon);
+	}
+	&__img {
+		width: 100%;
+		height: 14.9rem;
+		object-fit: cover;
+		margin: -4rem 0 0 0;
+	}
+	&__h2 {
+		margin: 1rem 1rem 0;
+	}
+	&__comment{
+		display: inline-block;
+		margin: 0 1rem 1rem;
+	}
+}

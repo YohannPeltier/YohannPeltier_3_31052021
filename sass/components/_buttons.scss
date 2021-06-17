@@ -1,0 +1,23 @@
+.btn {
+    @include shadow;
+    @include btn-background;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: map-get($color-text, btn);
+    font-size: map-get($font-size, btn);
+    font-weight: 500;
+    letter-spacing: .05rem;
+    padding: 16px 31px;
+    text-decoration: none;
+    &:hover {
+        @include shadow(0.5);
+        @include btn-background($lighten-color);
+        background-color: lighten($color-primary, $lighten-color);
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
