@@ -5,25 +5,29 @@
 ul, li{
 	list-style: none;
 }
+html{
+	font-size: 62.5%;
+}
 
 body {
 	margin: auto;
 	font-family: "Roboto", sans-serif;
 	display: flex;
 	flex-direction: column;
-	min-width: 240px;
+	min-width: 24rem;
+	font-size: 1.6rem;
 }
 
 .location {
 	background: map-get($color-background, location);
 	text-align: center;
-	padding: 1rem;
+	padding: 1.6rem;
 	position: relative;
 	&__icon {
 		height: map-get($font-size, location);
 		vertical-align: bottom;
 		position: absolute;
-		margin-left: -2rem;
+		margin-left: -3.2rem;
 		color: map-get($color-text, location);
 	}
 	&__text {
@@ -33,59 +37,59 @@ body {
 	}
 }
 .xplor-rest {
-	padding: 2.2rem;
+	padding: 3.5rem;
 	text-align: center;
 	&__text {
 		font-size: map-get($font-size, text);
 		font-weight: 400;
 		color: map-get($color-text, explore-restaurants);
-		margin: 1rem 0 2rem;
+		margin: 1.6rem 0 3.2rem;
 		display: block;
 	}
 }
 .process {
-	padding: 1.5rem;
+	padding: 2.4rem;
 	&__card {
 		@include shadow;
 		background: map-get($color-background, process__card);
-		height: 4.5rem;
-		line-height: 4.5rem;
-		border-radius: 1.4rem;
+		height: 7.2rem;
+		line-height: 7.2rem;
+		border-radius: 2.2rem;
 		font-weight: 900;
-		margin: 1rem 0;
-		white-space: nowrap;
-		text-overflow: ellipsis;
+		margin: 1.6rem 0;
+		display: flex;
+		align-items: center;
 	}
 	&__badge {
-		display: inline-block;
-		margin: 0 0 0 -0.75rem;
-		vertical-align: middle;
+		margin: 0 0 0 -1.2rem;
 		background: $color-primary;
 		border-radius: 1.2rem;
-		line-height: 1.6rem;
-		height: 1.5rem;
-		width: 1.5rem;
+		line-height: 2.4rem;
+		width: 2.5rem;
 		text-align: center;
 		color: map-get($color-text, badge);
 		font-size: map-get($font-size, badge);
 		font-weight: initial;
 	}
 	&__icon {
-		margin: 0 1.8rem 0 1.4rem;
-		vertical-align: text-bottom;
+		margin: 0 2.9rem 0 2.2rem;
 		height: map-get($font-size, process__icon);
 		color: map-get($color-text, process__icon);
+	}
+	&__text {
+		@extend %ellipsis;
+		flex: 1;
 	}
 }
 .rest {
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
-	padding: 3rem 1.5rem;
+	gap: 1.9rem;
+	padding: 4.8rem 2.4rem;
 	background: map-get($color-background, rest);
 	&__card {
 		@include shadow(.1);
-		border-radius: 1rem;
+		border-radius: 1.6rem;
 		background: map-get($color-background, rest__card);
 		position: relative;
 		overflow: hidden;
@@ -99,10 +103,10 @@ body {
 	&__new {
 		background: map-get($color-background, rest__new);
 		position: absolute;
-		border-radius: 0.15rem;
-		top: .7rem;
-		right: .7rem;
-		padding: .3rem .6rem;
+		border-radius: 0.25rem;
+		top: 1.1rem;
+		right: 1.1rem;
+		padding: .5rem 1rem;
 		font-size: map-get($font-size, rest__new);
 		font-weight: 500;
 		color: map-get($color-text, rest__new);
@@ -110,23 +114,33 @@ body {
 			display: none;		
 		}
 	}
-	&__icon {
-		position: absolute;
-		right: 1.5rem;
-		bottom:1.5rem;
-		height: map-get($font-size, rest__icon);
+	&__like {
+		@extend %like;
+		margin: -1.6rem 1.6rem;
+		&-icon{
+			@extend %like-icon;
+			&--full {
+				@extend %like-icon--full;
+				path {
+					@extend %like-icon--full-color;
+				}
+			}
+		}
+		&:hover &-icon--full {
+			@extend %like-hover;
+		}
 	}
 	&__img {
 		width: 100%;
-		height: 14.9rem;
+		height: 24rem;
 		object-fit: cover;
-		margin: -4rem 0 0 0;
+		margin: -6.4rem 0 0 0;
 	}
 	&__h2 {
-		margin: 1rem 1rem 0;
+		margin: 1.6rem 1.6rem 0;
 	}
 	&__comment{
 		display: inline-block;
-		margin: 0 1rem 1rem;
+		margin: 0 1.6rem 1.6rem;
 	}
 }

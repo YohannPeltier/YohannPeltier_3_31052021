@@ -31,18 +31,30 @@ $color-background: (
 );
 
 $font-size: (
-    header__logo: 1.8rem,
-    header__back: 1.2rem,
-    location: 1rem,
-    h1: 1.6rem,
-    h2: 1.2rem,
-    text: 1.1rem,
-    btn: 1rem,
-    process__icon: 1.3rem,
-    badge: .8rem,
-    rest__new: .8rem,
-    rest__icon: 1.5rem,
-    footer__logo: 1.6rem,
-    footer__icon: 0.9rem,
-    menu__heading: 1.8rem
+    header__logo: 2.9rem,
+    menu__heading: 2.9rem,
+    
+    h1: 2.6rem,
+    footer__logo: 2.6rem,
+
+    process__icon: 2.1rem,
+    
+    header__back: 1.9rem,
+    h2: 1.9rem,
+    
+    text: 1.8rem,
+
+    location: 1.6rem,
+    btn: 1.6rem,
+    
+    footer__icon: 1.4rem,
+    
+    badge: 1.3rem,
+    rest__new: 1.3rem,
 );
+
+%ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

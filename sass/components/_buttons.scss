@@ -3,13 +3,13 @@
     @include btn-background;
     background-color: $color-primary;
     border: none;
-    border-radius: 2rem;
+    border-radius: 3.2rem;
     cursor: pointer;
     color: map-get($color-text, btn);
     font-size: map-get($font-size, btn);
     font-weight: 700;
-    letter-spacing: .05rem;
-    padding: 1rem 2rem;
+    letter-spacing: .08rem;
+    padding: 1.6rem 3.2rem;
     text-decoration: none;
     &:hover {
         @include shadow(0.5);
@@ -18,11 +18,11 @@
     }
     &:active {
         position: relative;
-        top: 1px;
+        top: 0.1rem;
     }
     &--cmd {
         width: fit-content;
-        padding: 1rem 3.5rem;
+        padding: 1.6rem 5.6rem;
         align-self: center;
     }
 }
