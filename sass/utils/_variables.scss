@@ -2,6 +2,11 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+#gradient {
+    --color-stop-1: #FF79DA;
+    --color-stop-2: #9356DC;
+}
+
 $lighten-color: 3%;
 $shadow-opacity: .2;
 
@@ -11,7 +16,6 @@ $color-text: (
     process__icon: #7e7e7e,
     btn: #fff,
     badge: #fff,
-    rest: #f6f6f6,
     rest__new: #008766,
     rest__card: #000,
     footer__logo: #fff
@@ -20,6 +24,7 @@ $color-text: (
 $color-background: (
     location: #eaeaea,
     process__card: #f6f6f6,
+    rest: #f6f6f6,
     rest__card: #fff,
     rest__new: #99e2d0,
     footer: #353535
@@ -38,5 +43,6 @@ $font-size: (
     rest__new: .8rem,
     rest__icon: 1.5rem,
     footer__logo: 1.6rem,
-    footer__icon: 0.9rem
+    footer__icon: 0.9rem,
+    menu__heading: 1.8rem
 );

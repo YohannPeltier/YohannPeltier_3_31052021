@@ -7,9 +7,9 @@
     cursor: pointer;
     color: map-get($color-text, btn);
     font-size: map-get($font-size, btn);
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: .05rem;
-    padding: 16px 31px;
+    padding: 1rem 2rem;
     text-decoration: none;
     &:hover {
         @include shadow(0.5);
@@ -19,5 +19,10 @@
     &:active {
         position: relative;
         top: 1px;
+    }
+    &--cmd {
+        width: fit-content;
+        padding: 1rem 3.5rem;
+        align-self: center;
     }
 }

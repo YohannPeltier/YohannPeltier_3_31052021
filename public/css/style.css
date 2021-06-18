@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+#gradient {
+  --color-stop-1: #FF79DA;
+  --color-stop-2: #9356DC;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +18,7 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
+  min-width: 240px;
 }
 
 .location {
@@ -57,6 +63,8 @@ body {
   border-radius: 1.4rem;
   font-weight: 900;
   margin: 1rem 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .process__badge {
   display: inline-block;
@@ -152,9 +160,9 @@ body {
   cursor: pointer;
   color: #fff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.05rem;
-  padding: 16px 31px;
+  padding: 1rem 2rem;
   text-decoration: none;
 }
 .btn:hover {
@@ -165,6 +173,11 @@ body {
 .btn:active {
   position: relative;
   top: 1px;
+}
+.btn--cmd {
+  width: fit-content;
+  padding: 1rem 3.5rem;
+  align-self: center;
 }
 
 .header {
@@ -215,6 +228,175 @@ body {
   position: absolute;
   margin-left: -1.5rem;
   margin-top: 0.1rem;
+}
+
+.gradient {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.cover {
+  object-fit: cover;
+  height: 17rem;
+  width: 100%;
+}
+
+.menu {
+  background: #f6f6f6;
+  padding: 2rem 1.5rem 5rem;
+  border-radius: 3rem 3rem 0 0;
+  margin-top: -3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.menu__heading {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.menu__like-hover {
+  float: right;
+  margin: 0.3rem 5%;
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.menu__like-hover:hover .menu__like--full {
+  height: calc(1.8rem - 0.15rem);
+}
+.menu__like {
+  height: 1.8rem;
+  position: absolute;
+  z-index: 2;
+}
+.menu__like--full {
+  z-index: 1;
+  transition: all 0.2s linear;
+  width: 100%;
+  height: 0;
+  right: 0;
+  bottom: 0.1rem;
+}
+.menu__like--full path {
+  fill: url(#gradient);
+}
+
+.dish {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.dish:nth-child(2) .dish__card:nth-child(2) {
+  animation-delay: calc((10 - 9)*0.1s);
+}
+.dish:nth-child(2) .dish__card:nth-child(3) {
+  animation-delay: calc((11 - 9)*0.1s);
+}
+.dish:nth-child(2) .dish__card:nth-child(4) {
+  animation-delay: calc((12 - 9)*0.1s);
+}
+.dish:nth-child(2) .dish__card:nth-child(5) {
+  animation-delay: calc((13 - 9)*0.1s);
+}
+.dish:nth-child(3) .dish__card:nth-child(2) {
+  animation-delay: calc((14 - 9)*0.1s);
+}
+.dish:nth-child(3) .dish__card:nth-child(3) {
+  animation-delay: calc((15 - 9)*0.1s);
+}
+.dish:nth-child(3) .dish__card:nth-child(4) {
+  animation-delay: calc((16 - 9)*0.1s);
+}
+.dish:nth-child(3) .dish__card:nth-child(5) {
+  animation-delay: calc((17 - 9)*0.1s);
+}
+.dish:nth-child(4) .dish__card:nth-child(2) {
+  animation-delay: calc((18 - 9)*0.1s);
+}
+.dish:nth-child(4) .dish__card:nth-child(3) {
+  animation-delay: calc((19 - 9)*0.1s);
+}
+.dish:nth-child(4) .dish__card:nth-child(4) {
+  animation-delay: calc((20 - 9)*0.1s);
+}
+.dish:nth-child(4) .dish__card:nth-child(5) {
+  animation-delay: calc((21 - 9)*0.1s);
+}
+.dish__heading {
+  font-weight: 400;
+  width: 3rem;
+  height: 1.7rem;
+  border-bottom: 0.25rem solid #99E2D0;
+}
+.dish__card {
+  box-shadow: 0 0.3rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 1.2rem;
+  padding: 0.8rem 0.7rem;
+  animation-name: progress-bar;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.dish__card:hover .dish__select {
+  margin-right: -0.7rem;
+}
+.dish__card:hover .dish__select-icon {
+  transform: rotate(0);
+}
+.dish__info {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.dish__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+.dish__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish__price {
+  align-self: flex-end;
+  font-weight: 900;
+  margin-left: 1rem;
+}
+.dish__select {
+  background-color: #99e2d0;
+  margin: -1rem -4.7rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.dish__select-icon {
+  height: 1.3rem;
+  color: white;
+  transform: rotate(-270deg);
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: translate(0, 0.8rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

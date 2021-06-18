@@ -5,66 +5,150 @@
 		<link href="public\css\style.css" rel="stylesheet" />
 	</head>
 	<body>
+        <svg class="gradient" aria-hidden="true" focusable="false">
+            <linearGradient id="gradient" gradientTransform="rotate(70)">
+                <stop offset="10%" stop-color="var(--color-stop-1)" />
+                <stop offset="100%" stop-color="var(--color-stop-2)" />
+            </linearGradient>
+        </svg>
 		<header class="header">
+            <a href="index.html" class="header__back">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg>
+            </a>
             <img src="images/logo/ohmyfood.svg" alt="ohmyfood" class="header__logo" />
         </header>
-		<section class="location">
-            <svg class="location__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
-            <span class="location__text">Paris, Belleville</span>
-        </section>
-		<section class="xplor-rest">
-            <h1 class="h1">Réserver le menu qui vous convient</h1>
-            <span class="xplor-rest__text">Découvrez des restaurants d'exception, séléctionnés pas nos soins.</span>
-            <button class="btn">Explorer nos restaurants</button>
-        </section>
-		<section class="process">
-            <h1 class="h1">Fonctionnement</h1>
-            <div class="process__card">
-                <span class="process__badge">1</span>
-                <svg class="process__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
-                Choisissez un restaurant
-            </div>
-            <div class="process__card">
-                <span class="process__badge">2</span>
-                <svg class="process__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path></svg>
-                Composez votre menu
-            </div>
-            <div class="process__card">
-                <span class="process__badge">3</span>
-                <svg class="process__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="store" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 616 512"><path fill="currentColor" d="M602 118.6L537.1 15C531.3 5.7 521 0 510 0H106C95 0 84.7 5.7 78.9 15L14 118.6c-33.5 53.5-3.8 127.9 58.8 136.4 4.5.6 9.1.9 13.7.9 29.6 0 55.8-13 73.8-33.1 18 20.1 44.3 33.1 73.8 33.1 29.6 0 55.8-13 73.8-33.1 18 20.1 44.3 33.1 73.8 33.1 29.6 0 55.8-13 73.8-33.1 18.1 20.1 44.3 33.1 73.8 33.1 4.7 0 9.2-.3 13.7-.9 62.8-8.4 92.6-82.8 59-136.4zM529.5 288c-10 0-19.9-1.5-29.5-3.8V384H116v-99.8c-9.6 2.2-19.5 3.8-29.5 3.8-6 0-12.1-.4-18-1.2-5.6-.8-11.1-2.1-16.4-3.6V480c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32V283.2c-5.4 1.6-10.8 2.9-16.4 3.6-6.1.8-12.1 1.2-18.2 1.2z"></path></svg>
-                Dégustez au restaurant
-            </div>
-        </section>
-		<main class="rest">
-            <h1 class="h1">Restaurants</h1>
-            <a href="la-palette-du-gout.html" class="rest__card">
-                <span class="rest__new">Nouveau</span>
-                <img class="rest__img" src="images/restaurants/la_palette_du_gout.jpg" />
-                <h2 class="rest__h2 h2">La palette du goût</h2>
-                <span class="rest__comment">Ménilmontant</span>
-                <svg class="rest__icon" aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
-            </a>
-            <a href="la-note-enchantee.html" class="rest__card">
-                <span class="rest__new">Nouveau</span>
-                <span class="rest__like"></span>
-                <img class="rest__img" src="images/restaurants/la_note_enchantee.jpg" />
-                <h2 class="rest__h2 h2">La note enchantée</h2>
-                <span class="rest__comment">Charonne</span>
-            </a>
-            <a href="a-la-francaise.html" class="rest__card">
-                <span class="rest__new--hidden">Nouveau</span>
-                <span class="rest__like"></span>
-                <img class="rest__img" src="images/restaurants/a_la_francaise.jpg" />
-                <h2 class="rest__h2 h2">&Agrave; la française</h2>
-                <span class="rest__comment">Cité Rouge</span>
-            </a>
-            <a href="le-delice-des-sens.html" class="rest__card">
-                <span class="rest__new--hidden">Nouveau</span>
-                <span class="rest__like"></span>
-                <img class="rest__img" src="images/restaurants/le_delice_des_sens.jpg" />
-                <h2 class="rest__h2 h2">Le délice des sens</h2>
-                <span class="rest__comment">Folie-Méricourt</span>
-            </a>
+        <main>
+            <img class="cover" src="images/restaurants/la_palette_du_gout.jpg"/>
+            <section class="menu">
+                <h1 class="menu__heading">La palette du goût
+                    <span class="menu__like-hover">
+                    <svg class="menu__like menu__like--full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                    </svg>
+                    <svg class="menu__like" aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M462.3 62.7c-54.5-46.4-136-38.7-186.6 13.5L256 96.6l-19.7-20.3C195.5 34.1 113.2 8.7 49.7 62.7c-62.8 53.6-66.1 149.8-9.9 207.8l193.5 199.8c6.2 6.4 14.4 9.7 22.6 9.7 8.2 0 16.4-3.2 22.6-9.7L472 270.5c56.4-58 53.1-154.2-9.7-207.8zm-13.1 185.6L256.4 448.1 62.8 248.3c-38.4-39.6-46.4-115.1 7.7-161.2 54.8-46.8 119.2-12.9 142.8 11.5l42.7 44.1 42.7-44.1c23.2-24 88.2-58 142.8-11.5 54 46 46.1 121.5 7.7 161.2z"></path>
+                    </svg>
+                    </span>
+                </h1>
+                <div class="dish">
+                    <h2 class="h2 dish__heading">ENTR&Eacute;ES</h2>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Fricassée d'escargot</h3>
+                            <span class="dish__description">Au piment d'Espelette</span>
+                        </div>
+                        <div class="dish__price">25€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Foie gras de canard mi-cuit</h3>
+                            <span class="dish__description">Et ses copeaux de truffe noire</span>
+                        </div>
+                        <div class="dish__price">35€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Oeuf au plat</h3>
+                            <span class="dish__description">Assaisonné à la truffe sur lit de caviar</span>
+                        </div>
+                        <div class="dish__price">20€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish">
+                    <h2 class="h2 dish__heading">PLATS</h2>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Filet de boeuf aux herbes</h3>
+                            <span class="dish__description">Accompagné de sa ribambelle de légumes</span>
+                        </div>
+                        <div class="dish__price">40€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Parmentier de queue de boeuf</h3>
+                            <span class="dish__description">À la truffe noire sur sa purée de panais</span>
+                        </div>
+                        <div class="dish__price">35€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Filet de turbot</h3>
+                            <span class="dish__description">Aux agrumes</span>
+                        </div>
+                        <div class="dish__price">44€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish">
+                    <h2 class="h2 dish__heading">DESSERTS</h2>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Paris-Brest</h3>
+                            <span class="dish__description">Revisité</span>
+                        </div>
+                        <div class="dish__price">18€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Macaron au chocolat d'exception</h3>
+                            <span class="dish__description">Et glace à la vanille de Madagascar</span>
+                        </div>
+                        <div class="dish__price">22€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dish__card">
+                        <div class="dish__info">
+                            <h3 class="dish__name">Mousse au chocolat</h3>
+                            <span class="dish__description">Au piment d'Espelette et à la truffe noire</span>
+                        </div>
+                        <div class="dish__price">23€</div>
+                        <div class="dish__select">
+                            <svg class="dish__select-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--cmd">Commander</button>
+            </section>
         </main>
 		<footer class="footer">
             <svg class="footer__logo" viewBox="0 0 196 34" xmlns="http://www.w3.org/2000/svg">
@@ -84,5 +168,5 @@
                 <li><a href="#" class="footer__link">Contact</a></li>
             </ul>
         </footer>
-	</body>
+    </body>
 </html>

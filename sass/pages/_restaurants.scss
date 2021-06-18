@@ -1,0 +1,138 @@
+.gradient {
+    width:0;
+    height:0;
+    position: absolute;
+}
+.cover {
+    object-fit: cover;
+    height: 17rem;
+    width: 100%;
+}
+.menu {
+    background: map-get($color-background, rest);
+    padding: 2rem 1.5rem 5rem;
+    border-radius: 3rem 3rem 0 0;
+    margin-top: -3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &__heading{
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        font-size: map-get($font-size, menu__heading);
+    }
+    &__like-hover{
+        float: right;
+        margin: .3rem 5%;
+        position: relative;
+        height: map-get($font-size, menu__heading);
+        width: map-get($font-size, menu__heading);
+        &:hover .menu__like--full {
+            height: calc(#{map-get($font-size, menu__heading)} - 0.15rem);
+        }
+    }
+    &__like{
+        height: map-get($font-size, menu__heading);
+        position: absolute;
+        z-index: 2;
+        &--full {
+            z-index: 1;
+            transition: all 0.2s linear;
+            width: 100%;
+            height: 0;
+            right: 0;
+            bottom: 0.1rem;
+            path {
+                fill:url(#gradient);
+            }
+        }
+    }
+}
+.dish {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    @for $i from 2 through 4 {
+        @for $j from 2 through 5 {
+            &:nth-child(#{$i}) .dish__card:nth-child(#{$j}) {
+                animation-delay: calc((#{4*$i+$j} - 9)*0.1s);
+            }
+        }
+    }
+    &__heading {
+        font-weight: 400;
+        width: 3rem;
+        height: 1.7rem;
+        border-bottom: 0.25rem solid $color-tertiary;
+    }
+    &__card {
+        @include shadow;
+        display: flex;
+        overflow: hidden;
+        cursor: pointer;
+        background: map-get($color-background , rest__card);
+        border-radius: 1.2rem;
+        padding: 0.8rem 0.7rem;
+        animation-name: progress-bar;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        &:hover {
+            .dish__select {
+                margin-right: -0.7rem;
+            }
+            .dish__select-icon {
+                transform: rotate(0);
+            }
+        }
+    }
+    &__info {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
+    &__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: .3rem;
+    }
+    &__description {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &__price {
+        align-self: flex-end;
+        font-weight: 900;
+        margin-left: 1rem;
+    }
+    &__select {
+        background-color: #99e2d0;
+        margin: -1rem -4.7rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: .5s;
+    }
+    &__select-icon {
+        height: map-get($font-size, process__icon);
+        color: white;
+        transform: rotate(-270deg);
+        transition-duration: .4s;
+        transition-delay: 0.1s;
+    }
+}
+
+@keyframes progress-bar{
+    0% {
+        transform: translate(0,.8rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
