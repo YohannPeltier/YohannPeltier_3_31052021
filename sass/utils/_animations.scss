@@ -90,7 +90,7 @@ $dish-select-duration: 0.4s;
 	align-items: center;
 	justify-content: center;
 	background: rgba(255, 255, 255, 0.9);
-	animation: loader 0.1s linear 3s both;
+	animation: loader .1s linear 2.9s both;
 	&__spinner {
 		position: relative;
 		width: 125px;
@@ -130,9 +130,10 @@ $dish-select-duration: 0.4s;
 }
 @keyframes loader {
 	0%{
-		visibility: visible;
+		opacity: 1;
 	}
 	100%{
 		opacity: 0;
+		visibility: hidden;
 	}
 }

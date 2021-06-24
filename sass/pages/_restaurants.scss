@@ -10,7 +10,7 @@
 }
 .menu {
     background: map-get($color-background, rest);
-    padding: 3.2rem 2.4rem 8rem;
+    padding: 3.2rem 5% 8rem;
     border-radius: 4.8rem 4.8rem 0 0;
     margin-top: -4.8rem;
     position: relative;
@@ -23,7 +23,7 @@
         font-size: map-get($font-size, menu__heading);
     }
     &__like {
-        margin: .5rem 5%;
+        margin: .5rem 1.6rem;
         @extend %like;
         &-icon{
             @extend %like-icon;
