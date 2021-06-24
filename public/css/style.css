@@ -1,48 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 #gradient {
-  --color-stop-1: #FF79DA;
-  --color-stop-2: #9356DC;
+  --color-stop-1: #9356DC;
+  --color-stop-2: #FF79DA;
 }
 
-.dish__description, .dish__name, .dish__info, .dish__card, .process__text {
+.process__text, .dish__description, .dish__name, .dish__info, .dish__card {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 /* Animation Like */
-.menu__like, .rest__like {
+.rest__like, .menu__like {
   float: right;
   position: relative;
   height: 2.9rem;
   width: 2.9rem;
 }
 
-.menu__like-icon, .rest__like-icon {
+.rest__like-icon, .menu__like-icon {
   height: 2.9rem;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
 }
 
-.menu__like-icon--full, .rest__like-icon--full {
+.rest__like-icon--full, .menu__like-icon--full {
   z-index: 1;
-  transition: all 0.2s linear;
+  transform: scale(0);
   width: 100%;
-  height: 0;
-  right: 0;
-  bottom: 0.16rem;
 }
 
-.menu__like-icon--full path, .rest__like-icon--full path {
+.menu__like-icon--full {
+  transition: all 0.2s linear;
+}
+
+.rest__like-icon--full path, .menu__like-icon--full path {
   fill: url(#gradient);
 }
 
-.menu__like:hover .menu__like-icon--full, .rest__like:hover .rest__like-icon--full {
-  height: calc(2.9rem - 0.25rem);
+.rest__like:hover .rest__like-icon--full, .menu__like:hover .menu__like-icon--full {
+  transform: scale(1.01);
 }
 
 /* Animation Selection du plat */
 .dish__card:hover .dish__select {
+  margin-right: -1.1rem;
+}
+
+.dish__select {
   transition-duration: 0.5s;
 }
 
@@ -64,40 +69,40 @@
 }
 
 .dish:nth-child(2) .dish__card:nth-child(2) {
-  animation-delay: calc((10 - 9)*0.1s);
+  animation-delay: calc((10 - 9) * 0.1s);
 }
 .dish:nth-child(2) .dish__card:nth-child(3) {
-  animation-delay: calc((11 - 9)*0.1s);
+  animation-delay: calc((11 - 9) * 0.1s);
 }
 .dish:nth-child(2) .dish__card:nth-child(4) {
-  animation-delay: calc((12 - 9)*0.1s);
+  animation-delay: calc((12 - 9) * 0.1s);
 }
 .dish:nth-child(2) .dish__card:nth-child(5) {
-  animation-delay: calc((13 - 9)*0.1s);
+  animation-delay: calc((13 - 9) * 0.1s);
 }
 .dish:nth-child(3) .dish__card:nth-child(2) {
-  animation-delay: calc((14 - 9)*0.1s);
+  animation-delay: calc((14 - 9) * 0.1s);
 }
 .dish:nth-child(3) .dish__card:nth-child(3) {
-  animation-delay: calc((15 - 9)*0.1s);
+  animation-delay: calc((15 - 9) * 0.1s);
 }
 .dish:nth-child(3) .dish__card:nth-child(4) {
-  animation-delay: calc((16 - 9)*0.1s);
+  animation-delay: calc((16 - 9) * 0.1s);
 }
 .dish:nth-child(3) .dish__card:nth-child(5) {
-  animation-delay: calc((17 - 9)*0.1s);
+  animation-delay: calc((17 - 9) * 0.1s);
 }
 .dish:nth-child(4) .dish__card:nth-child(2) {
-  animation-delay: calc((18 - 9)*0.1s);
+  animation-delay: calc((18 - 9) * 0.1s);
 }
 .dish:nth-child(4) .dish__card:nth-child(3) {
-  animation-delay: calc((19 - 9)*0.1s);
+  animation-delay: calc((19 - 9) * 0.1s);
 }
 .dish:nth-child(4) .dish__card:nth-child(4) {
-  animation-delay: calc((20 - 9)*0.1s);
+  animation-delay: calc((20 - 9) * 0.1s);
 }
 .dish:nth-child(4) .dish__card:nth-child(5) {
-  animation-delay: calc((21 - 9)*0.1s);
+  animation-delay: calc((21 - 9) * 0.1s);
 }
 
 @keyframes dish-loads {
@@ -108,6 +113,69 @@
   100% {
     transform: translate(0, 0);
     opacity: 1;
+  }
+}
+/* Loader */
+.loader__spinner::after, .loader__spinner::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid transparent;
+}
+
+.loader {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  animation: loader 0.1s linear 2.9s both;
+}
+.loader__spinner {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #9356DC;
+  animation: spinner 2s linear infinite;
+}
+.loader__spinner::before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #FF79DA;
+  animation: spinner 3.5s linear infinite;
+}
+.loader__spinner::after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #99E2D0;
+  animation: spinner 1.75s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 * {
@@ -128,124 +196,8 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-  min-width: 24rem;
+  min-width: 32rem;
   font-size: 1.6rem;
-}
-
-.location {
-  background: #eaeaea;
-  text-align: center;
-  padding: 1.6rem;
-  position: relative;
-}
-.location__icon {
-  height: 1.6rem;
-  vertical-align: bottom;
-  position: absolute;
-  margin-left: -3.2rem;
-  color: #353535;
-}
-.location__text {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #353535;
-}
-
-.xplor-rest {
-  padding: 3.5rem;
-  text-align: center;
-}
-.xplor-rest__text {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #4d4d4d;
-  margin: 1.6rem 0 3.2rem;
-  display: block;
-}
-
-.process {
-  padding: 2.4rem;
-}
-.process__card {
-  box-shadow: 0 0.5rem 1.3rem 0 rgba(0, 0, 0, 0.2);
-  background: #f6f6f6;
-  height: 7.2rem;
-  line-height: 7.2rem;
-  border-radius: 2.2rem;
-  font-weight: 900;
-  margin: 1.6rem 0;
-  display: flex;
-  align-items: center;
-}
-.process__badge {
-  margin: 0 0 0 -1.2rem;
-  background: #9356DC;
-  border-radius: 1.2rem;
-  line-height: 2.4rem;
-  width: 2.5rem;
-  text-align: center;
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: initial;
-}
-.process__icon {
-  margin: 0 2.9rem 0 2.2rem;
-  height: 2.1rem;
-  color: #7e7e7e;
-}
-.process__text {
-  flex: 1;
-}
-
-.rest {
-  display: flex;
-  flex-direction: column;
-  gap: 1.9rem;
-  padding: 4.8rem 2.4rem;
-  background: #f6f6f6;
-}
-.rest__card {
-  box-shadow: 0 0.5rem 1.3rem 0 rgba(0, 0, 0, 0.1);
-  border-radius: 1.6rem;
-  background: #fff;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  color: #000;
-}
-.rest__card:visited {
-  text-decoration: none;
-  color: #000;
-}
-.rest__new {
-  background: #99e2d0;
-  position: absolute;
-  border-radius: 0.25rem;
-  top: 1.1rem;
-  right: 1.1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #008766;
-}
-.rest__new--hidden {
-  display: none;
-}
-.rest__like {
-  margin: -1.6rem 1.6rem;
-}
-.rest__img {
-  width: 100%;
-  height: 24rem;
-  object-fit: cover;
-  margin: -6.4rem 0 0 0;
-}
-.rest__h2 {
-  margin: 1.6rem 1.6rem 0;
-}
-.rest__comment {
-  display: inline-block;
-  margin: 0 1.6rem 1.6rem;
 }
 
 .h1 {
@@ -288,8 +240,8 @@ body {
 }
 
 .header {
-  padding: 1.2rem 0 0.9rem;
-  box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.2);
+  padding: 2rem 0 1.4rem;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
   z-index: 1;
@@ -300,17 +252,17 @@ body {
 .header__back {
   width: 1.9rem;
   position: absolute;
-  left: 1.5rem;
-  top: 1.4rem;
+  left: 2.4rem;
+  top: 2.1rem;
   color: #353535;
 }
 
 .footer {
   background: #353535;
-  padding: 2rem;
+  padding: 3.2rem calc(5% + 1rem);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.4rem;
 }
 .footer__logo {
   color: #fff;
@@ -320,10 +272,10 @@ body {
 .footer__list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 .footer__list > :nth-child(-n+2) {
-  margin-left: 1.5rem;
+  margin-left: 2.4rem;
 }
 .footer__link {
   color: #fff;
@@ -333,8 +285,8 @@ body {
   height: 1.4rem;
   vertical-align: middle;
   position: absolute;
-  margin-left: -1.5rem;
-  margin-top: 0.1rem;
+  margin-left: -2.4rem;
+  margin-top: 0.2rem;
 }
 
 .gradient {
@@ -351,7 +303,7 @@ body {
 
 .menu {
   background: #f6f6f6;
-  padding: 3.2rem 2.4rem 8rem;
+  padding: 3.2rem 5% 8rem;
   border-radius: 4.8rem 4.8rem 0 0;
   margin-top: -4.8rem;
   position: relative;
@@ -365,7 +317,7 @@ body {
   font-size: 2.9rem;
 }
 .menu__like {
-  margin: 0.5rem 5%;
+  margin: 0.5rem 1.6rem;
 }
 .dish {
   display: flex;
@@ -385,9 +337,6 @@ body {
   background: #fff;
   border-radius: 1.9rem;
   padding: 1.3rem 1.1rem;
-}
-.dish__card:hover .dish__select {
-  margin-right: -1.1rem;
 }
 .dish__info {
   flex: 1;
@@ -411,6 +360,129 @@ body {
 .dish__select-icon {
   height: 2.1rem;
   color: #fff;
+}
+
+.location {
+  background: #eaeaea;
+  text-align: center;
+  padding: 1.6rem;
+  position: relative;
+}
+.location__icon {
+  height: 1.6rem;
+  vertical-align: bottom;
+  position: absolute;
+  margin-left: -3.2rem;
+  color: #353535;
+}
+.location__text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #353535;
+}
+
+.xplor-rest {
+  padding: 3.5rem 9%;
+  text-align: center;
+}
+.xplor-rest__text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #4d4d4d;
+  margin: 1.6rem -1% 3.2rem;
+  display: block;
+}
+
+.process {
+  padding: 2.4rem 5%;
+}
+.process__card {
+  box-shadow: 0 0.5rem 1.3rem 0 rgba(0, 0, 0, 0.2);
+  background: #f6f6f6;
+  height: 7.2rem;
+  line-height: 7.2rem;
+  border-radius: 2.2rem;
+  font-weight: 900;
+  margin: 1.6rem 0 1.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.process__card:hover {
+  background: #f5edff;
+}
+.process__card:hover .process__icon {
+  color: #9356DC;
+}
+.process__badge {
+  margin: 0 0 0 -1.2rem;
+  background: #9356DC;
+  border-radius: 1.2rem;
+  line-height: 2.4rem;
+  width: 2.5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: initial;
+}
+.process__icon {
+  margin: 0 2.9rem 0 2.2rem;
+  height: 2.1rem;
+  color: #7e7e7e;
+}
+.process__text {
+  flex: 1;
+}
+
+.rest {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  padding: 4.8rem 5%;
+  background: #f6f6f6;
+}
+.rest__card {
+  box-shadow: 0 0.5rem 1.3rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 1.6rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #000;
+}
+.rest__card:visited {
+  text-decoration: none;
+  color: #000;
+}
+.rest__new {
+  background: #99E2D0;
+  position: absolute;
+  border-radius: 0.25rem;
+  top: 1.1rem;
+  right: 1.1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #008766;
+}
+.rest__new--hidden {
+  display: none;
+}
+.rest__like {
+  pointer-events: visiblePainted;
+  margin: -1.6rem 1.6rem;
+}
+.rest__img {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  margin: -6.4rem 0 0 0;
+}
+.rest__h2 {
+  margin: 1.6rem 1.6rem 0;
+}
+.rest__comment {
+  display: inline-block;
+  margin: 0 1.6rem 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
