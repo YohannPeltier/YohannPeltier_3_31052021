@@ -29,14 +29,15 @@
             @extend %like-icon;
             &--full {
                 @extend %like-icon--full;
+                @extend %like-icon--full-transition;
                 path {
                     @extend %like-icon--full-color;
                 }
             }
         }
-        &:hover &-icon--full {
-            @extend %like-hover;
-        }
+		&:hover &-icon--full {
+			@extend %like-icon--full-hover;
+		}
     }
 }
 .dish {
@@ -61,8 +62,7 @@
         @extend %dish-loads;
         &:hover {
             .dish__select {
-                margin-right: -1.1rem;
-                @extend %dish-select;
+                @extend %dish-select-margin;
             }
             .dish__select-icon {
                 @extend %dish-select-icon-end;
@@ -92,6 +92,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @extend %dish-select;
     }
     &__select-icon {
         height: map-get($font-size, process__icon);

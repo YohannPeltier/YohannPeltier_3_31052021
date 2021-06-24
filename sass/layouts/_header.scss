@@ -1,6 +1,6 @@
 .header {
-	padding: 1.2rem 0 .9rem;
-	box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .2);
+	padding: 2rem 0 1.4rem;
+	box-shadow: 0 .2rem .5rem 0 rgba(0, 0, 0, .2);
 	text-align: center;
 	position: relative;
 	z-index: 1;
@@ -10,8 +10,8 @@
 	&__back {
 		width: map-get($font-size, header__back);
 		position: absolute;
-		left: 1.5rem;
-		top: 1.4rem;
+		left: 2.4rem;
+		top: 2.1rem;
 		color: map-get($color-text, location);
 	}
 }

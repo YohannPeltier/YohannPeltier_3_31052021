@@ -101,7 +101,7 @@ body {
 		}
 	}
 	&__new {
-		background: map-get($color-background, rest__new);
+		background: $color-tertiary;
 		position: absolute;
 		border-radius: 0.25rem;
 		top: 1.1rem;
@@ -116,6 +116,7 @@ body {
 	}
 	&__like {
 		@extend %like;
+		pointer-events:visiblePainted;
 		margin: -1.6rem 1.6rem;
 		&-icon{
 			@extend %like-icon;
@@ -127,7 +128,7 @@ body {
 			}
 		}
 		&:hover &-icon--full {
-			@extend %like-hover;
+			@extend %like-icon--full-hover;
 		}
 	}
 	&__img {

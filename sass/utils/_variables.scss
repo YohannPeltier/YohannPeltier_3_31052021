@@ -3,8 +3,8 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
 #gradient {
-    --color-stop-1: #FF79DA;
-    --color-stop-2: #9356DC;
+    --color-stop-1: #{$color-primary};
+    --color-stop-2: #{$color-secondary};
 }
 
 $lighten-color: 3%;
@@ -26,7 +26,6 @@ $color-background: (
     process__card: #f6f6f6,
     rest: #f6f6f6,
     rest__card: #fff,
-    rest__new: #99e2d0,
     footer: #353535
 );
 

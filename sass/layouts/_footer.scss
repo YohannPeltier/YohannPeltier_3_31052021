@@ -1,9 +1,9 @@
 .footer {
 	background: map-get($color-background, footer);
-	padding: 2rem;
+	padding: 3.2rem;
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 2.4rem;
 	&__logo {
 		color: map-get($color-text, footer__logo);
 		height: map-get($font-size, footer__logo);
@@ -12,9 +12,9 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: .5rem;
+		gap: .8rem;
 		>:nth-child(-n+2) {
-			margin-left: 1.5rem;
+			margin-left: 2.4rem;
 		}
 	}
 	&__link {
@@ -25,7 +25,7 @@
 		height: map-get($font-size, footer__icon);
 		vertical-align: middle;
 		position: absolute;
-		margin-left: -1.5rem;
-		margin-top: .1rem;
+		margin-left: -2.4rem;
+		margin-top: .2rem;
 	}
 }
