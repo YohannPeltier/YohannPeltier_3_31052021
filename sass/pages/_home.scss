@@ -1,0 +1,134 @@
+
+.location {
+	background: map-get($color-background, location);
+	text-align: center;
+	padding: 1.6rem;
+	position: relative;
+	&__icon {
+		height: map-get($font-size, location);
+		vertical-align: bottom;
+		position: absolute;
+		margin-left: -3.2rem;
+		color: map-get($color-text, location);
+	}
+	&__text {
+		font-size: map-get($font-size, location);
+		font-weight: 500;
+		color: map-get($color-text, location);
+	}
+}
+.xplor-rest {
+	padding: 3.5rem 9%;
+	text-align: center;
+	&__text {
+		font-size: map-get($font-size, text);
+		font-weight: 400;
+		color: map-get($color-text, explore-restaurants);
+		margin: 1.6rem -1% 3.2rem;
+		display: block;
+	}
+}
+.process {
+	padding: 2.4rem 5%;
+	&__card {
+		@include shadow;
+		background: map-get($color-background, process__card);
+		height: 7.2rem;
+		line-height: 7.2rem;
+		border-radius: 2.2rem;
+		font-weight: 900;
+		margin: 1.6rem 0 1.6rem 1.2rem;
+		display: flex;
+		align-items: center;
+		&:hover {
+			background: map-get($color-background, process__card-over);
+		}
+		&:hover .process__icon {
+			color: $color-primary;
+		}
+	}
+	&__badge {
+		margin: 0 0 0 -1.2rem;
+		background: $color-primary;
+		border-radius: 1.2rem;
+		line-height: 2.4rem;
+		width: 2.5rem;
+		text-align: center;
+		color: map-get($color-text, badge);
+		font-size: map-get($font-size, badge);
+		font-weight: initial;
+	}
+	&__icon {
+		margin: 0 2.9rem 0 2.2rem;
+		height: map-get($font-size, process__icon);
+		color: map-get($color-text, process__icon);
+	}
+	&__text {
+		@extend %ellipsis;
+		flex: 1;
+	}
+}
+.rest {
+	display: flex;
+	flex-direction: column;
+	gap: 1.9rem;
+	padding: 4.8rem 5%;
+	background: map-get($color-background, rest);
+	&__card {
+		@include shadow(.1);
+		border-radius: 1.6rem;
+		background: map-get($color-background, rest__card);
+		position: relative;
+		overflow: hidden;
+		text-decoration: none;
+		color: map-get($color-text, rest__card);
+		&:visited {
+			text-decoration: none;
+			color: map-get($color-text, rest__card);
+		}
+	}
+	&__new {
+		background: $color-tertiary;
+		position: absolute;
+		border-radius: 0.25rem;
+		top: 1.1rem;
+		right: 1.1rem;
+		padding: .5rem 1rem;
+		font-size: map-get($font-size, rest__new);
+		font-weight: 500;
+		color: map-get($color-text, rest__new);
+		&--hidden {
+			display: none;		
+		}
+	}
+	&__like {
+		@extend %like;
+		pointer-events:visiblePainted;
+		margin: -1.6rem 1.6rem;
+		&-icon{
+			@extend %like-icon;
+			&--full {
+				@extend %like-icon--full;
+				path {
+					@extend %like-icon--full-color;
+				}
+			}
+		}
+		&:hover &-icon--full {
+			@extend %like-icon--full-hover;
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 24rem;
+		object-fit: cover;
+		margin: -6.4rem 0 0 0;
+	}
+	&__h2 {
+		margin: 1.6rem 1.6rem 0;
+	}
+	&__comment{
+		display: inline-block;
+		margin: 0 1.6rem 1.6rem;
+	}
+}

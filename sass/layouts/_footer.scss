@@ -1,6 +1,6 @@
 .footer {
 	background: map-get($color-background, footer);
-	padding: 3.2rem;
+	padding: 3.2rem calc(5% + 1rem);
 	display: flex;
 	flex-direction: column;
 	gap: 2.4rem;
