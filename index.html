@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 		<link href="public/css/style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="favicon.ico" />
+        <title>ohmyfood</title>
 	</head>
 	<body>
         <div class="loader">
@@ -19,15 +22,15 @@
         </header>
 		<section class="location">
             <svg class="location__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
-            <span class="location__text">Paris, Belleville</span>
+            <h2 class="location__text">Paris, Belleville</h2>
         </section>
 		<section class="xplor-rest">
-            <h1 class="h1">Réserver le menu qui vous convient</h1>
+            <h2 class="h2">Réserver le menu qui vous convient</h2>
             <span class="xplor-rest__text">Découvrez des restaurants d'exception, séléctionnés pas nos soins.</span>
             <button class="btn">Explorer nos restaurants</button>
         </section>
 		<section class="process">
-            <h1 class="h1">Fonctionnement</h1>
+            <h2 class="h2">Fonctionnement</h2>
             <div class="process__card">
                 <span class="process__badge">1</span>
                 <svg class="process__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
@@ -45,13 +48,13 @@
             </div>
         </section>
 		<main class="rest">
-            <h1 class="h1">Restaurants</h1>
+            <h2 class="h2">Restaurants</h2>
             <a href="la-palette-du-gout.html" class="rest__card">
                 <span class="rest__new">Nouveau</span>
-                <img class="rest__img" src="images/restaurants/la_palette_du_gout.jpg" />
-                <h2 class="rest__h2 h2">La palette du goût</h2>
+                <img class="rest__img" src="images/restaurants/la_palette_du_gout.jpg" alt="La palette du goût" />
+                <h3 class="rest__h3 h3">La palette du goût</h3>
                 <span class="rest__comment">Ménilmontant</span>
-                <span class="rest__like" link="none">
+                <span class="rest__like">
                     <svg class="rest__like-icon rest__like-icon--full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
                     </svg>
@@ -63,8 +66,8 @@
             <a href="la-note-enchantee.html" class="rest__card">
                 <span class="rest__new">Nouveau</span>
                 <span class="rest__like"></span>
-                <img class="rest__img" src="images/restaurants/la_note_enchantee.jpg" />
-                <h2 class="rest__h2 h2">La note enchantée</h2>
+                <img class="rest__img" src="images/restaurants/la_note_enchantee.jpg" alt="La note enchantée" />
+                <h3 class="rest__h3 h3">La note enchantée</h3>
                 <span class="rest__comment">Charonne</span>
                 <span class="rest__like">
                     <svg class="rest__like-icon rest__like-icon--full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -78,8 +81,8 @@
             <a href="a-la-francaise.html" class="rest__card">
                 <span class="rest__new--hidden">Nouveau</span>
                 <span class="rest__like"></span>
-                <img class="rest__img" src="images/restaurants/a_la_francaise.jpg" />
-                <h2 class="rest__h2 h2">&Agrave; la française</h2>
+                <img class="rest__img" src="images/restaurants/a_la_francaise.jpg" alt="&Agrave; la française" />
+                <h3 class="rest__h3 h3">&Agrave; la française</h3>
                 <span class="rest__comment">Cité Rouge</span>
                 <span class="rest__like">
                     <svg class="rest__like-icon rest__like-icon--full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -93,8 +96,8 @@
             <a href="le-delice-des-sens.html" class="rest__card">
                 <span class="rest__new--hidden">Nouveau</span>
                 <span class="rest__like"></span>
-                <img class="rest__img" src="images/restaurants/le_delice_des_sens.jpg" />
-                <h2 class="rest__h2 h2">Le délice des sens</h2>
+                <img class="rest__img" src="images/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens" />
+                <h3 class="rest__h3 h3">Le délice des sens</h3>
                 <span class="rest__comment">Folie-Méricourt</span>
                 <span class="rest__like">
                     <svg class="rest__like-icon rest__like-icon--full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
