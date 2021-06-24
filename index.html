@@ -2,12 +2,15 @@
 	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-		<link href="public\css\style.css" rel="stylesheet" />
+		<link href="public/css/style.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
+        <div class="loader">
+            <div class="loader__spinner"></div>
+        </div>
         <svg class="gradient" aria-hidden="true" focusable="false">
-            <linearGradient id="gradient" gradientTransform="rotate(70)">
-                <stop offset="10%" stop-color="var(--color-stop-1)" />
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="var(--color-stop-1)" />
                 <stop offset="100%" stop-color="var(--color-stop-2)" />
             </linearGradient>
         </svg>
@@ -48,7 +51,7 @@
                 <img class="rest__img" src="images/restaurants/la_palette_du_gout.jpg" />
                 <h2 class="rest__h2 h2">La palette du goût</h2>
                 <span class="rest__comment">Ménilmontant</span>
-                <span class="rest__like">
+                <span class="rest__like" link="none">
                     <svg class="rest__like-icon rest__like-icon--full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
                     </svg>
