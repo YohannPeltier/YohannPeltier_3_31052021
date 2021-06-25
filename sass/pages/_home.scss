@@ -122,7 +122,6 @@
 		color: map-get($color-text, rest__card);
 		@include tablets {
 			width: 48%;
-			align-self: space-between;
 		}
 		&:visited {
 			text-decoration: none;
