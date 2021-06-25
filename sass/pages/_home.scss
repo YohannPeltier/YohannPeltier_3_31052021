@@ -35,7 +35,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2.4rem;
-		padding: 2.4rem 5%;
+		padding: 2.4rem 5% 6.4rem;
 		@include tablets{
 			flex-direction: initial;
 			flex-wrap: wrap;

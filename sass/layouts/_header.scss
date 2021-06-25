@@ -1,9 +1,12 @@
 .header {
-	padding: 2rem 0 1.4rem;
 	box-shadow: 0 .2rem .5rem 0 rgba(0, 0, 0, .2);
-	text-align: center;
-	position: relative;
 	z-index: 1;
+	&__container {
+		@extend %max-width;
+		padding: 2rem 0 1.4rem;
+		text-align: center;
+		position: relative;
+	}
 	&__logo {
 		height: map-get($font-size, header__logo);
 	}
