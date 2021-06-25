@@ -40,6 +40,7 @@ $dish-select-duration: 0.4s;
 	transform: rotate(-270deg);
 	transition-duration: $dish-select-duration;
 	transition-delay: $dish-select-delay;
+	animation-fill-mode: both;
 }
 %dish-select-icon-end {
 	transform: rotate(0);
