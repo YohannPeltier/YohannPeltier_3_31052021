@@ -18,6 +18,7 @@
 }
 @mixin like-icon--full-transition {
 	transition: all 0.2s linear;
+	animation-fill-mode: both;
 }
 %like-icon--full-color {
 	fill: url(#gradient);
