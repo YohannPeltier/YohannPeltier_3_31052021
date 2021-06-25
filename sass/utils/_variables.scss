@@ -7,6 +7,17 @@ $color-tertiary: #99E2D0;
     --color-stop-2: #{$color-secondary};
 }
 
+$breakpoints: (
+    mobile: 576px,
+    tablets: 768px,
+    desktop: 992px
+);
+
+%max-width {
+    max-width: 120rem;
+    margin: auto;
+}
+
 $lighten-color: 3%;
 $shadow-opacity: .2;
 
@@ -34,13 +45,13 @@ $font-size: (
     header__logo: 2.9rem,
     menu__heading: 2.9rem,
     
-    h1: 2.6rem,
+    h2: 2.6rem,
     footer__logo: 2.6rem,
 
     process__icon: 2.1rem,
     
     header__back: 1.9rem,
-    h2: 1.9rem,
+    h3: 1.9rem,
     
     text: 1.8rem,
 

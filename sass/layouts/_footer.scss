@@ -1,9 +1,12 @@
 .footer {
 	background: map-get($color-background, footer);
-	padding: 3.2rem calc(5% + 1rem);
-	display: flex;
-	flex-direction: column;
-	gap: 2.4rem;
+	&__container {
+		@extend %max-width;
+		padding: 3.2rem calc(5% + 1rem);
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+	}
 	&__logo {
 		color: map-get($color-text, footer__logo);
 		height: map-get($font-size, footer__logo);
