@@ -2,28 +2,35 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+/* Couleurs pour dégradé SVG */
 #gradient {
     --color-stop-1: #{$color-primary};
     --color-stop-2: #{$color-secondary};
 }
 
+/* Breakpoints */
 $breakpoints: (
     mobile: 576px,
     tablets: 768px,
     desktop: 992px
 );
 
+/* Largeur maximum du site */
 %max-width {
-    max-width: 120rem;
+    max-width: 120rem; // 1200px
     margin: auto;
 }
 
+/* pourcentage d'éclairciment pour bouton */
 $lighten-color: 3%;
+
+/* Opacité ombre porté de base */
 $shadow-opacity: .2;
 
+/* Couleur des textes */
 $color-text: (
     location: #353535,
-    explore-restaurants: #4d4d4d,
+    xplor-rest__text: #4d4d4d,
     process__icon: #7e7e7e,
     btn: #fff,
     badge: #fff,
@@ -32,6 +39,7 @@ $color-text: (
     footer__logo: #fff
 );
 
+/* Couleur des fonds */
 $color-background: (
     location: #eaeaea,
     process__card: #f6f6f6,
@@ -41,29 +49,24 @@ $color-background: (
     footer: #353535
 );
 
+/* Taille des caractères */
 $font-size: (
     header__logo: 2.9rem,
     menu__heading: 2.9rem,
-    
     h2: 2.6rem,
     footer__logo: 2.6rem,
-
     process__icon: 2.1rem,
-    
     header__back: 1.9rem,
     h3: 1.9rem,
-    
     text: 1.8rem,
-
     location: 1.6rem,
     btn: 1.6rem,
-    
     footer__icon: 1.4rem,
-    
     badge: 1.3rem,
     rest__new: 1.3rem,
 );
 
+/* Styles pour couper le texte (...) si trop long */
 %ellipsis {
     white-space: nowrap;
     text-overflow: ellipsis;

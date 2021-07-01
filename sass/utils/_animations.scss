@@ -1,5 +1,4 @@
-/* Animation Like */
-
+/* Animation Like (Coeur) */
 %like {
 	float: right;
 	position: relative;
@@ -47,7 +46,7 @@ $dish-select-duration: 0.4s;
 	transform: rotate(0);
 }
 
-/* Animation Menu des Restaurant */
+/* Animation chargelment du Menu des Restaurant */
 %dish-loads {
 	animation-name: dish-loads;
 	animation-duration: 1s;
