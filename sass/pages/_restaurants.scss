@@ -110,6 +110,7 @@
     }
     &__description {
         @extend %ellipsis;
+        font-size: 1.5rem;
     }
     &__price {
         align-self: flex-end;
